@@ -15,7 +15,7 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/login/login', [PostController::class, 'login']);
 
-Route::get('/posts/sidebar', [PostController::class, 'sidebar']);
+Route::get('/header/base-views', [PostController::class, 'sidebar']);
 
 Route::get('/posts/{post}', [PostController::class, 'show']);
 

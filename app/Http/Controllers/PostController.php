@@ -16,7 +16,7 @@ class PostController extends Controller
     }
     public function sidebar()
     {
-        return view('posts.sidebar');
+        return view('header.base-views');
     }
     public function show($post)
     {
