@@ -321,9 +321,7 @@ body.dark .home .text{
     transition: margin-left 0.3s ease; /* Transición suave cuando cambia el margen */
 }
 
-.content.dark{
-    color: var(--text-color);
-}
+
 
 .sidebar.close + .content {
     margin-left: 50px;        /* Desplazamos el contenido cuando el sidebar está cerrado */
