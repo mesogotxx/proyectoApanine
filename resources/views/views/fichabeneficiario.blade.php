@@ -1,7 +1,7 @@
 @extends('header.base-views')
 
 @push('styles')
-<link rel="stylesheet" href="{{ asset('cssbootstrap/bootstrap.css') }}">
+<!-- <link rel="stylesheet" href="{{ asset('cssbootstrap/bootstrap.css') }}"> -->
 @endpush
 
 @section('title', 'Ficha Beneficiario')
