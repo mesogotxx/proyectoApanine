@@ -20,7 +20,10 @@ Route::get('/posts/sidebar', [PostController::class, 'sidebar']);
 Route::get('/posts/{post}', [PostController::class, 'show']);
 
 
+
 // rutas views
 Route::get('/views/fichabeneficiario', [PostController::class, 'fichabeneficiario'])->name('fichabeneficiario');
+Route::get('/views/formularioBeneficiario', [PostController::class, 'formularioBeneficiario'])->name('formularioBeneficiario');
+Route::get('/views/verBeneficiario', [PostController::class, 'verBeneficiario'])->name('verBeneficiario');
 Route::get('/views/asistencia', [PostController::class, 'asistencia'])->name('asistencia');
 Route::get('/views/registroactividad', [PostController::class, 'registroactividad'])->name('registroactividad');

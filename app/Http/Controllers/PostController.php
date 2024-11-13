@@ -25,6 +25,16 @@ class PostController extends Controller
         return view('views.fichabeneficiario'); 
     }
 
+    public function formularioBeneficiario()
+    {
+        return view('views.formularioBeneficiario'); 
+    }
+
+    public function verBeneficiario()
+    {
+        return view('views.verBeneficiario'); 
+    }
+
     public function asistencia()
     {
         return view('views.asistencia'); 

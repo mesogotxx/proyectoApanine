@@ -410,58 +410,84 @@ table {
     padding: 0;
     border-collapse: collapse;
     background-color: #E4E9F7;
-  }
-  
-  table tr {
+}
+
+table tr {
     border: 1px solid black;
     padding: 5px;
-  }
-  
-  table td, table th {
+    height: auto;
+}
+
+table td,
+table th {
     padding: 10px;
     text-align: center;
     border: 1px solid black;
-  }
-  
-  table th {
-    text-transform: uppercase;
-    font-size: 18px;
+}
+
+table th {
+    font-size: clamp(12px, 1vw, 18px);
     letter-spacing: 1px;
-  }
-  
-  /* Responsividad */
-  @media screen and (max-width: 800px) {
+}
+
+/* FICHA BENEFICIARIO */
+.cuadrado {
+    height: max-content;
+    width: max-content;
+    padding: 10px 10px;
+    background-color: #F6F5FF;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.cuadrado h2{
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+.cuadrado p{
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+.letraNegrita {
+    font-weight: 700;
+}
+
+/* Responsividad */
+@media screen and (max-width: 1200px) {
     table {
-      border: 0;
+        border: 0;
     }
+
     table tr {
-      margin-bottom: 10px;
-      display: block;
-      border-bottom: 2px solid #ddd;
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
     }
+
     table td {
-      display: block;
-      text-align: right;
-      font-size: 16px;
-      border-bottom: 1px dotted #ccc;
-      position: relative;
-      padding-left: 50%;
+        display: block;
+        text-align: right;
+        font-size: clamp(12px, 1vw, 18px);
+        border-bottom: 1px dotted #ccc;
+        position: relative;
+        padding-left: 50%;
     }
+
     table td:last-child {
-      border-bottom: 0;
+        border-bottom: 0;
     }
+
     table td:before {
-      content: attr(data-label);
-      position: absolute;
-      left: 10px;
-      width: 45%;
-      padding-left: 10px;
-      text-align: left;
-      text-transform: uppercase;
-      font-weight: 600;
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding: 10px 10px;
+        text-align: left;
+        font-weight: 600;
     }
+
     table thead {
-      display: none;
+        display: none;
     }
-  }
-  
+}
