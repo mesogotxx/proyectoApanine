@@ -8,6 +8,8 @@
     <!-- Cargar estilos globales -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
+    @stack('styles')
+    <!-- {{-- <link rel="stylesheet" href="{{ asset('cssbootstrap/bootstrap.css') }}"> --}} -->
 </head>
 
 <body>
@@ -98,12 +100,12 @@
             </header>
         </nav>
 
-        <!-- Contenido específico de cada página -->
+        <!-- Contenido para ver las vistas-->
         <main>
             @yield('content') <!-- Contenido dinámico de cada vista -->
         </main>
     </div>
-    {{-- script --}}
+    {{-- script para el dia y la noche, tambien actualizar el margen --}}
     <script>
         const body = document.querySelector('body'),
             sidebar = body.querySelector('nav'),
