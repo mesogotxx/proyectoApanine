@@ -6,12 +6,19 @@
 
 <!-- Div para que el sidebar no moleste -->
 <div class="content">
-  <a href="{{ route('formularioBeneficiario') }}">Añadir beneficiario</a>
-  <!-- Para buscar productos por texto -->
-  <form method="POST">
-    <input type="text" name="benBuscar" id="benBuscar" placeholder="Buscar...">
-    <button type="submit">BUSCAR</button>
-  </form>
+  <div class="fila1">
+    <h2>Listado de beneficiarios</h2>
+  </div>
+  <hr>
+  <div class="fila2">
+    <a class="boton-primario" id="benAgregar" href="{{ route('formularioBeneficiario') }}"><p><i class='bx bxs-user-plus'></i> Agregar</p></a>
+    <a class="boton-secundario" id="benExportar" href="{{ route('fichabeneficiario') }}"><i class='bx bx-export' ></i> Exportar</a>
+    <!-- Para buscar productos por texto -->
+    <form method="POST">
+      <input type="text" name="benBuscar" id="benBuscar" placeholder="Buscar...">
+      <button type="submit"><i class='bx bx-search' ></i></button>
+    </form>
+  </div>
   <table>
     <thead>
       <tr>
@@ -24,7 +31,7 @@
         <th>NEE</th>
         <th>Enfermedades crónicas</th>
         <th>¿Cirugias?</th>
-        <th>Acciones</th>
+        <th>Detalles</th>
       </tr>
     </thead>
     <tbody>
@@ -38,7 +45,7 @@
         <td data-label="NEE">Cáracter transitorio</td>
         <td data-label="Enfermedades crónicas">Diabetes tipo 2</td>
         <td data-label="¿Cirugias?">Sí</td>
-        <td data-label="Acciones"><a href="{{ route('verBeneficiario') }}">Ver detalles</a></td>
+        <td data-label="Acciones"><a class="detalles" href="{{ route('verBeneficiario') }}"><i class='bx bxs-file-doc' ></i></a></td>
       </tr>
       <tr>
         <td data-label="Rut">9835803-k</td>
@@ -50,9 +57,15 @@
         <td data-label="NEE">Cáracter transitorio</td>
         <td data-label="Enfermedades crónicas">Diabetes tipo 2</td>
         <td data-label="¿Cirugias?">Sí</td>
-        <td data-label="Acciones"><a href="{{ route('verBeneficiario') }}">Ver detalles</a></td>
+        <td data-label="Acciones"><a class="detalles" href="{{ route('verBeneficiario') }}"><i class='bx bxs-file-doc' ></i></a></td>
       </tr>
     </tbody>
   </table>
+  <div class="fila4">
+  <a class="boton-primario" id="atras" href="{{ route('fichabeneficiario') }}"><< Atras</a>
+  <a class="boton-primario" id="uno" href="{{ route('fichabeneficiario') }}">1</a>
+  <a class="boton-primario" id="dos" href="{{ route('fichabeneficiario') }}">2</a>
+  <a class="boton-primario" id="adelante" href="{{ route('fichabeneficiario') }}">Adelante >></a>
+  </div>
 </div>
 @endsection

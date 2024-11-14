@@ -26,7 +26,7 @@
                         <img src="{{ asset('img/apanine_logo.png') }}" alt="Logo">
                     </span>
                     <div class="text logo-text">
-                        <span class="name">Apanine</span>
+                        <span class="name">Apaninnet</span>
                         <span class="profession">Mis secciones</span>
                     </div>
                     <i class='bx bx-chevron-right toggle'></i>
@@ -55,26 +55,6 @@
                                 <a href="{{ route('registroactividad') }}">
                                     <i class='bx bx-wallet icon'></i>
                                     <span class="text nav-text">Registro/actividad</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-pie-chart-alt icon' ></i>
-                                    <span class="text nav-text"></span>
-                                </a>
-                            </li>
-        
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-heart icon' ></i>
-                                    <span class="text nav-text"></span>
-                                </a>
-                            </li>
-        
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-bell icon' ></i>
-                                    <span class="text nav-text"></span>
                                 </a>
                             </li>
                         </ul>
