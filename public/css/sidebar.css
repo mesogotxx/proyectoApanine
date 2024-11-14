@@ -1,13 +1,14 @@
 /* Google Font Import - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
 
-:root{
+:root {
     /* ===== Colors ===== */
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
@@ -22,25 +23,27 @@
     --tran-04: all 0.3s ease;
     --tran-05: all 0.3s ease;
 
-    --sidebar-width: 250px; 
+    --sidebar-width: 250px;
 }
 
 
 
-body{
+body {
     min-height: 100vh;
     background-color: var(--body-color);
     transition: var(--tran-05);
-    overflow-x: hidden;  /* Elimina la barra de desplazamiento horizontal */
-    margin: 0;           /* Elimina márgenes adicionales que puedan estar generando espacio */
+    overflow-x: hidden;
+    /* Elimina la barra de desplazamiento horizontal */
+    margin: 0;
+    /* Elimina márgenes adicionales que puedan estar generando espacio */
 }
 
-::selection{
+::selection {
     background-color: var(--primary-color);
     color: #fff;
 }
 
-body.dark{
+body.dark {
     --body-color: #18191a;
     --sidebar-color: #242526;
     --primary-color: #3a3b3c;
@@ -50,7 +53,7 @@ body.dark{
 }
 
 /* ===== Sidebar ===== */
- .sidebar{
+.sidebar {
     position: fixed;
     top: 0;
     left: 0;
@@ -59,15 +62,16 @@ body.dark{
     padding: 10px 14px;
     background: var(--sidebar-color);
     transition: var(--tran-05);
-    z-index: 100; 
-     
+    z-index: 100;
+
 }
-.sidebar.close{
+
+.sidebar.close {
     width: 88px;
 }
 
 /* ===== Reusable code - Here ===== */
-.sidebar li{
+.sidebar li {
     height: 50px;
     list-style: none;
     display: flex;
@@ -76,12 +80,12 @@ body.dark{
 }
 
 .sidebar header .image,
-.sidebar .icon{
+.sidebar .icon {
     min-width: 60px;
     border-radius: 6px;
 }
 
-.sidebar .icon{
+.sidebar .icon {
     min-width: 60px;
     border-radius: 6px;
     height: 100%;
@@ -92,58 +96,62 @@ body.dark{
 }
 
 .sidebar .text,
-.sidebar .icon{
+.sidebar .icon {
     color: var(--text-color);
     transition: var(--tran-03);
 }
 
-.sidebar .text{
+.sidebar .text {
     font-size: 17px;
     font-weight: 500;
     white-space: nowrap;
     opacity: 1;
 }
-.sidebar.close .text{
+
+.sidebar.close .text {
     opacity: 0;
 }
+
 /* =========================== */
 
-.sidebar header{
+.sidebar header {
     position: relative;
 }
 
-.sidebar header .image-text{
+.sidebar header .image-text {
     display: flex;
     align-items: center;
 }
-.sidebar header .logo-text{
+
+.sidebar header .logo-text {
     display: flex;
     flex-direction: column;
 }
+
 header .image-text .name {
     margin-top: 2px;
     font-size: 18px;
     font-weight: 600;
 }
 
-header .image-text .profession{
+header .image-text .profession {
     font-size: 16px;
     margin-top: -2px;
     display: block;
 }
 
-.sidebar header .image{
+.sidebar header .image {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.sidebar header .image img{
+.sidebar header .image img {
     width: 40px;
     border-radius: 6px;
 }
 
-.sidebar header .toggle{
+.sidebar header .toggle {
     position: absolute;
     right: -25px;
     transform: translateY(-50%) rotate(180deg);
@@ -160,26 +168,26 @@ header .image-text .profession{
     transition: var(--tran-05);
 }
 
-body.dark .sidebar header .toggle{
+body.dark .sidebar header .toggle {
     color: var(--text-color);
 }
 
-.sidebar.close .toggle{
+.sidebar.close .toggle {
     transform: translateY(-50%) rotate(0deg);
 }
 
-.sidebar .menu{
+.sidebar .menu {
     margin-top: 40px;
 }
 
-.sidebar li.search-box{
+.sidebar li.search-box {
     border-radius: 6px;
     background-color: var(--primary-color-light);
     cursor: pointer;
     transition: var(--tran-05);
 }
 
-.sidebar li.search-box input{
+.sidebar li.search-box input {
     height: 100%;
     width: 100%;
     outline: none;
@@ -191,7 +199,8 @@ body.dark .sidebar header .toggle{
     font-weight: 500;
     transition: var(--tran-05);
 }
-.sidebar li a{
+
+.sidebar li a {
     list-style: none;
     height: 100%;
     background-color: transparent;
@@ -204,54 +213,61 @@ body.dark .sidebar header .toggle{
     transition: var(--tran-03);
 }
 
-.sidebar li a:hover{
+.sidebar li a:hover {
     background-color: var(--primary-color);
 }
+
 .sidebar li a:hover .icon,
-.sidebar li a:hover .text{
+.sidebar li a:hover .text {
     color: var(--sidebar-color);
 }
+
 body.dark .sidebar li a:hover .icon,
-body.dark .sidebar li a:hover .text{
+body.dark .sidebar li a:hover .text {
     color: var(--text-color);
 }
 
-.sidebar .menu-bar{
+.sidebar .menu-bar {
     height: calc(100% - 55px);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow-y: scroll;
 }
-.menu-bar::-webkit-scrollbar{
+
+.menu-bar::-webkit-scrollbar {
     display: none;
 }
-.sidebar .menu-bar .mode{
+
+.sidebar .menu-bar .mode {
     border-radius: 6px;
     background-color: var(--primary-color-light);
     position: relative;
     transition: var(--tran-05);
 }
 
-.menu-bar .mode .sun-moon{
+.menu-bar .mode .sun-moon {
     height: 50px;
     width: 60px;
 }
 
-.mode .sun-moon i{
+.mode .sun-moon i {
     position: absolute;
 }
-.mode .sun-moon i.sun{
-    opacity: 0;
-}
-body.dark .mode .sun-moon i.sun{
-    opacity: 1;
-}
-body.dark .mode .sun-moon i.moon{
+
+.mode .sun-moon i.sun {
     opacity: 0;
 }
 
-.menu-bar .bottom-content .toggle-switch{
+body.dark .mode .sun-moon i.sun {
+    opacity: 1;
+}
+
+body.dark .mode .sun-moon i.moon {
+    opacity: 0;
+}
+
+.menu-bar .bottom-content .toggle-switch {
     position: absolute;
     right: 0;
     height: 100%;
@@ -262,7 +278,8 @@ body.dark .mode .sun-moon i.moon{
     border-radius: 6px;
     cursor: pointer;
 }
-.toggle-switch .switch{
+
+.toggle-switch .switch {
     position: relative;
     height: 22px;
     width: 40px;
@@ -271,7 +288,7 @@ body.dark .mode .sun-moon i.moon{
     transition: var(--tran-05);
 }
 
-.switch::before{
+.switch::before {
     content: '';
     position: absolute;
     height: 15px;
@@ -284,11 +301,11 @@ body.dark .mode .sun-moon i.moon{
     transition: var(--tran-04);
 }
 
-body.dark .switch::before{
+body.dark .switch::before {
     left: 20px;
 }
 
-.home{
+.home {
     position: absolute;
     top: 0;
     left: 250px;
@@ -297,32 +314,180 @@ body.dark .switch::before{
     background-color: var(--body-color);
     transition: var(--tran-05);
 }
-.home .text{
+
+.home .text {
     font-size: 30px;
     font-weight: 500;
     color: var(--text-color);
     padding: 12px 60px;
 }
 
-.sidebar.close ~ .home{
+.sidebar.close~.home {
     left: 78px;
     height: 100vh;
     width: calc(100% - 78px);
 }
-body.dark .home .text{
+
+body.dark .home .text {
     color: var(--text-color);
 }
 
 /* Contenido principal */
 .content {
-    margin-left: 250px;       /* Desplazamos el contenido al lado derecho del sidebar cuando está abierto */
+    margin-left: 250px;
+    /* Desplazamos el contenido al lado derecho del sidebar cuando está abierto */
     padding: 20px;
-    width: 100%;              /* El contenido debe ocupar el espacio restante */
-    transition: margin-left 0.3s ease; /* Transición suave cuando cambia el margen */
+    width: calc(100% - 250px);
+    /* El contenido debe ocupar el espacio restante */
+    transition: margin-left 0.3s ease;
+    /* Transición suave cuando cambia el margen */
 }
 
+.sidebar.close+.content {
+    margin-left: 88px;
+    /* Desplazamos el contenido cuando el sidebar está cerrado */
+    width: calc(100% - 88px);
+    /* Ajustamos el ancho del contenido */
+}
 
+.content.dark {
+    color: var(--text-color);
+}
 
-.sidebar.close + .content {
-    margin-left: 50px;        /* Desplazamos el contenido cuando el sidebar está cerrado */
+/* FORMULARIOS */
+form {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+}
+
+/* Ordenamos los numeros de telefono y ruts*/
+.layoutTelefono {
+    width: 20%;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+/* Ordenamos los nombres */
+.layoutNombre {
+    width: 40%;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+/* Ordenamos domicilio */
+.layoutDomicilio {
+    display: flex;
+    flex-direction: column;
+}
+
+.layoutDomicilio div {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Ordenamos colegio */
+.layout {
+    width: 35%;
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+/* TABLA */
+table {
+    border: 1px solid black;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    border-collapse: collapse;
+    background-color: #E4E9F7;
+}
+
+table tr {
+    border: 1px solid black;
+    padding: 5px;
+    height: auto;
+}
+
+table td,
+table th {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+}
+
+table th {
+    font-size: clamp(12px, 1vw, 18px);
+    letter-spacing: 1px;
+}
+
+/* FICHA BENEFICIARIO */
+.cuadrado {
+    height: max-content;
+    width: max-content;
+    padding: 10px 10px;
+    background-color: #F6F5FF;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.cuadrado h2{
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+.cuadrado p{
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+.letraNegrita {
+    font-weight: 700;
+}
+
+/* Responsividad */
+@media screen and (max-width: 1200px) {
+    table {
+        border: 0;
+    }
+
+    table tr {
+        margin-bottom: 10px;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+
+    table td {
+        display: block;
+        text-align: right;
+        font-size: clamp(12px, 1vw, 18px);
+        border-bottom: 1px dotted #ccc;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+    table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding: 10px 10px;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    table thead {
+        display: none;
+    }
 }

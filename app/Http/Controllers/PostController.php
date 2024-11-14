@@ -6,10 +6,6 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    public function index()
-    {
-        return view('posts.index');
-    }
     public function login()
     {
         return view('login.login');
@@ -27,6 +23,16 @@ class PostController extends Controller
     public function fichabeneficiario()
     {
         return view('views.fichabeneficiario'); 
+    }
+
+    public function formularioBeneficiario()
+    {
+        return view('views.formularioBeneficiario'); 
+    }
+
+    public function verBeneficiario()
+    {
+        return view('views.verBeneficiario'); 
     }
 
     public function asistencia()
