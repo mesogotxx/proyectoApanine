@@ -9,7 +9,7 @@
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
     @stack('styles')
-    {{-- <link rel="stylesheet" href="{{ asset('cssbootstrap/bootstrap.css') }}"> --}}
+    <!-- {{-- <link rel="stylesheet" href="{{ asset('cssbootstrap/bootstrap.css') }}"> --}} -->
 </head>
 
 <body>
