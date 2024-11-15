@@ -14,6 +14,7 @@
     --toggle-color: #DDD;
     --text-color: #262626;
     --text-color-secondary: #434343;
+    --danger: #E1454C;
 
     /* ====== Transition ====== */
     --tran-03: all 0.2s ease;
@@ -361,54 +362,6 @@ main {
     color: var(--text-color);
 }
 
-/* FORMULARIOS */
-form {
-    display: flex;
-    flex-direction: column;
-    row-gap: 8px;
-}
-
-/* Ordenamos los numeros de telefono y ruts*/
-.layoutTelefono {
-    width: 20%;
-
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-}
-
-/* Ordenamos los nombres */
-.layoutNombre {
-    width: 40%;
-
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-}
-
-/* Ordenamos domicilio */
-.layoutDomicilio {
-    display: flex;
-    flex-direction: column;
-}
-
-.layoutDomicilio div {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Ordenamos colegio */
-.layout {
-    width: 35%;
-
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
-    gap: 8px;
-}
-
 /* TABLA */
 table {
     width: 100%;
@@ -447,7 +400,9 @@ table th {
 }
 
 /* BOTONES */
-.boton-primario, .boton-secundario {
+.boton-primario,
+.boton-secundario,
+.boton-terciario {
     text-decoration: none;
     font-size: (12px, 2vw, 16px);
     padding: 6px 10px;
@@ -455,7 +410,8 @@ table th {
     transition: all ease .25s;
 }
 
-.boton-primario i, .boton-secundario i {
+.boton-primario i,
+.boton-secundario i {
     font-size: (16px, 2vw, 20px);
 }
 
@@ -470,35 +426,62 @@ table th {
     color: var(--sidebar-color);
 }
 
-#benAgregar:hover, #benExportar:hover {
+.boton-terciario {
+    background-color: var(--danger);
+    color: var(--sidebar-color);
+}
+
+#benAgregar:hover,
+#benExportar:hover,
+#benEliminar:hover {
     transform: scale(1.05);
     transition: all ease .25s;
 }
 
-#benAgregar:active, #benExportar:active {
+#benAgregar:active,
+#benExportar:active,
+#benEliminar:active {
     transform: scale(0.97);
 }
 
-#atras:hover, #uno:hover, #dos:hover, #adelante:hover {
+#atras:hover,
+#uno:hover,
+#dos:hover,
+#adelante:hover {
     background-color: var(--primary-color);
     color: var(--sidebar-color);
     transition: all ease 0.25s;
-} 
+}
 
-#atras:active, #atras:focus {
+#atras:active,
+#atras:focus {
     background-color: var(--primary-color);
 }
 
-#uno:active, #uno:focus {
+#uno:active,
+#uno:focus {
     background-color: var(--primary-color);
 }
 
-#dos:active, #dos:focus {
+#dos:active,
+#dos:focus {
     background-color: var(--primary-color);
 }
 
-#adelante:active, #adelante:focus {
+#adelante:active,
+#adelante:focus {
     background-color: var(--primary-color);
+}
+
+#volver1:hover,
+#volver2:hover {
+    transform: scale(1.05);
+    transition: all ease .25s;
+}
+
+#volver1:active,
+#volver2:active {
+    transform: scale(0.97);
 }
 
 .detalles {
@@ -533,12 +516,12 @@ hr {
     padding: 20px 0 20px 0;
 }
 
-.fila2 form{
+.fila2 form {
     display: flex;
     flex-direction: row;
 }
 
-.fila2 form input{
+.fila2 form input {
     outline: none;
     border: 1px var(--primary-color) solid;
     padding: 6px 10px;
@@ -548,11 +531,11 @@ hr {
     color: var(--primary-color);
 }
 
-.fila2 form input:focus{
+.fila2 form input:focus {
     border: 2px var(--primary-color) solid;
 }
 
-.fila2 form button{
+.fila2 form button {
     outline: none;
     border: none;
     padding: 6px 10px;
@@ -571,25 +554,162 @@ hr {
     padding: 20px 0 20px 0;
 }
 
-.cuadrado {
+/* VER BENEFICIARIO */
+.card {
+    min-height: 100dvh;
     height: max-content;
-    width: max-content;
-    padding: 10px 10px;
-    background-color: #F6F5FF;
-    border-radius: 12px;
-    margin-bottom: 10px;
+    width: 100%;
+    border: 1px var(--primary-color) solid;
+    border-radius: 8px;
+    padding: 20px 20px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
 }
 
-.cuadrado h2{
-    font-size: clamp(14px, 2vw, 20px);
-}
-
-.cuadrado p{
-    font-size: clamp(12px, 2vw, 16px);
+.cuadrado {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 10px;
+    height: 100%;
+    width: 100%;
+    padding: 20px 20px;
+    border: 1px var(--primary-color) solid;
+    border-radius: 8px;
 }
 
 .letraNegrita {
-    font-weight: 700;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.cuadrado p {
+    color: var(--text-color-secondary);
+}
+
+.listaElemento {
+    margin-left: 20px;
+}
+
+/* Ajustes de posición para formulario de beneficiario */
+/* Ordenamos los numeros de telefono y ruts*/
+.separacionFormulario .layoutTelefono {
+    width: 20%;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+/* Ordenamos los nombres */
+.separacionFormulario .layoutNombre {
+    width: 40%;
+
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+/* Ordenamos domicilio */
+.separacionFormulario .layoutDomicilio {
+    display: flex;
+    flex-direction: column;
+}
+
+.separacionFormulario .layoutDomicilio div {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+/* Ordenamos colegio */
+.separacionFormulario .layout {
+    width: 35%;
+
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+}
+
+/* FORMULARIOS */
+.formularioPiola {
+    width: 100%;
+    height: max-content;
+    padding: 20px 20px;
+    background-color: var(--sidebar-color);
+    border: 1px var(--primary-color) solid;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.formularioPiola h1 {
+    font-size: clamp(24px, 1vw, 40px);
+}
+
+.separacionFormulario {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+}
+
+.separacionFormulario label,
+.separacionFormulario legend {
+    color: var(--text-color-secondary);
+}
+
+input {
+    border: 1px var(--primary-color) solid;
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: var(--text-color-secondary);
+}
+
+select {
+    border: 1px var(--primary-color) solid;
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: var(--text-color-secondary);
+}
+
+select option {
+    background-color: var(--sidebar-color);
+    color: var(--text-color-secondary);
+}
+
+select option:checked {
+    background-color: var(--sidebar-color);
+    color: var(--text-color-secondary);
+}
+
+textarea {
+    border: 1px var(--primary-color) solid;
+    padding: 6px 10px;
+    border-radius: 5px;
+    color: var(--text-color-secondary);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: var(--primary-color);
+    padding: 6px 6px;
+}
+
+fieldset {
+    border: 1px var(--primary-color) solid;
+    padding: 6px 10px;
+    border-radius: 5px;
+}
+
+/* modificamos los botones */
+#grupoBotones {
+    padding: -40px -40px;
 }
 
 /* Responsividad */
@@ -629,5 +749,73 @@ hr {
 
     table thead {
         display: none;
+    }
+
+    .separacionFormulario .layoutNombre {
+        grid-template-rows: 2fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsividad */
+@media screen and (max-width: 1200px) {
+    table {
+        border: 0;
+    }
+
+    table tr {
+        margin-bottom: 0;
+        display: block;
+        border-bottom: 2px solid #ddd;
+    }
+
+    table td {
+        display: block;
+        text-align: right;
+        font-size: clamp(12px, 1vw, 18px);
+        border-bottom: 1px dotted #ccc;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+    table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding: 10px 10px;
+        text-align: left;
+        font-weight: 600;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    .separacionFormulario .layoutNombre {
+        grid-template-rows: 2fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .separacionFormulario .layoutNombre input {
+        grid-template-rows: 2fr;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsividad */
+@media screen and (max-width: 710px) {
+    .separacionFormulario .layoutTelefono {
+        grid-template-rows: 2fr;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .separacionFormulario .layoutNombre {
+        grid-template-rows: 4fr;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
