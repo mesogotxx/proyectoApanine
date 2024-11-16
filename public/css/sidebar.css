@@ -330,6 +330,72 @@ body.dark .home .text {
     color: var(--text-color);
 }
 
+/* NAVBAR */
+.navPiola {
+    height: max-content;
+    width: 100%;
+    padding: 10px 10px 0 10px;
+    background-color: var(--sidebar-color);
+    border: 1px var(--primary-color) solid;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    row-gap: 5px;
+}
+
+h3 {
+    font-size: clamp(16px, 2dvw, 21px);
+}
+
+h4 {
+    font-size: clamp(12px, 2dvw, 16px);
+    color: var(--text-color-secondary);
+}
+
+.navLinks {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+
+.navEnlace {
+    position: relative;
+    height: max-content;
+    padding-bottom: 10px;
+}
+
+.navEnlace a {
+    text-decoration: none;
+    color: var(--text-color-secondary);
+    font-size: clamp(12px, 2dvw, 17px);
+    display: flex;
+}
+
+.navEnlace a:hover,
+.navEnlace a:focus {
+    color: var(--text-color);
+}
+
+.navEnlace a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    visibility: hidden;
+    transition: all ease 0.25s;
+}
+
+.navLinks a:hover::before {
+    width: 100%;
+    visibility: visible;
+}
+
 /* Contenido principal */
 main {
     min-height: 100dvh;
@@ -402,7 +468,8 @@ table th {
 /* BOTONES */
 .boton-primario,
 .boton-secundario,
-.boton-terciario {
+.boton-terciario,
+.boton-cuartiario {
     text-decoration: none;
     font-size: (12px, 2vw, 16px);
     padding: 6px 10px;
@@ -431,16 +498,23 @@ table th {
     color: var(--sidebar-color);
 }
 
-#benAgregar:hover,
-#benExportar:hover,
-#benEliminar:hover {
+.boton-cuartiario {
+    background-color: var(--primary-color);
+    color: var(--sidebar-color);
+}
+
+.boton-primario:hover,
+.boton-secundario:hover,
+.boton-terciario:hover,
+.boton-cuartiario:hover {
     transform: scale(1.05);
     transition: all ease .25s;
 }
 
-#benAgregar:active,
-#benExportar:active,
-#benEliminar:active {
+.boton-primario:active,
+.boton-secundario:active,
+.boton-terciario:active,
+.boton-cuartiario:active {
     transform: scale(0.97);
 }
 
@@ -497,15 +571,17 @@ table th {
 .fila1 {
     width: 100%;
     display: flex;
-    justify-content: start;
+    flex-direction: column;
+    align-items: start;
     padding: 20px 0 20px 0;
     margin-bottom: 0;
+    row-gap: 5px;
 }
 
 hr {
     width: 100%;
     background-color: var(--text-color);
-    height: 2px;
+    height: 1px;
 }
 
 .fila2 {
@@ -514,6 +590,11 @@ hr {
     justify-content: end;
     column-gap: 20px;
     padding: 20px 0 20px 0;
+}
+
+#todos {
+    column-gap: 4px;
+    padding: 5px 0 5px 0;
 }
 
 .fila2 form {
@@ -554,7 +635,7 @@ hr {
     padding: 20px 0 20px 0;
 }
 
-/* VER BENEFICIARIO */
+/* CARD */
 .card {
     min-height: 100dvh;
     height: max-content;
@@ -593,6 +674,20 @@ hr {
     margin-left: 20px;
 }
 
+/* CARD SIMPLE */
+.cardSimple {
+    height: max-content;
+    width: 100%;
+    padding: 20px 20px;
+    background-color: var(--sidebar-color);
+    border: 1px var(--primary-color) solid;
+    border-radius: 8px;
+}
+
+#btnGroup {
+    padding: 0;
+}
+
 /* Ajustes de posición para formulario de beneficiario */
 /* Ordenamos los numeros de telefono y ruts*/
 .separacionFormulario .layoutTelefono {
@@ -602,6 +697,13 @@ hr {
     grid-template-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
     gap: 8px;
+}
+
+.separacionFormulario .layoutTiempo {
+    width: 100%;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
 }
 
 /* Ordenamos los nombres */
@@ -693,6 +795,12 @@ textarea {
     padding: 6px 10px;
     border-radius: 5px;
     color: var(--text-color-secondary);
+}
+
+.textarea {
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
 }
 
 input[type="radio"],

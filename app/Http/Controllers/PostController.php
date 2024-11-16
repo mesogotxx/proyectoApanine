@@ -20,28 +20,30 @@ class PostController extends Controller
     }
     
     // Vistas sidebar
+    // VIEWS DEL BENEFICIARIO
     public function fichabeneficiario()
     {
-        return view('views.fichabeneficiario'); 
+        return view('views.beneficiario.fichabeneficiario'); 
     }
 
     public function formularioBeneficiario()
     {
-        return view('views.formularioBeneficiario'); 
+        return view('views.beneficiario.formularioBeneficiario'); 
     }
 
     public function verBeneficiario()
     {
-        return view('views.verBeneficiario'); 
+        return view('views.beneficiario.verBeneficiario'); 
     }
 
+    // VIEWS DE ASISTENCIA
     public function asistencia()
     {
-        return view('views.asistencia'); 
+        return view('views.asistencia.asistencia'); 
     }
 
     public function registroactividad()
     {
-        return view('views.registroactividad'); 
+        return view('views.asistencia.registroactividad'); 
     }
 }
