@@ -415,32 +415,6 @@ main {
     align-items: center;
 }
 
-<<<<<<< HEAD
-
-=======
-.content {
-    margin-left: 250px;
-    padding: 20px;
-    width: calc(100% - 250px);
-    min-height: 98dvh;
-    height: max-content;
-    transition: margin-left 0.3s ease;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.sidebar.close+.content {
-    margin-left: 88px;
-    /* Desplazamos el contenido cuando el sidebar está cerrado */
-    width: calc(100% - 88px);
-    /* Ajustamos el ancho del contenido */
-}
-
-.content.dark {
-    color: var(--text-color);
-}
->>>>>>> 5d0d12489986e28a1c8486d01f77d44b2cc60e54
 
 /* TABLA */
 table {
