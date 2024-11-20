@@ -8,8 +8,17 @@
     <!-- Cargar estilos globales -->
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="{{ asset('css/sidebar.css') }}">
+<<<<<<< HEAD
     @stack('styles')
     
+=======
+    <!-- Cambiar fuente -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    @stack('styles')
+    <!-- {{-- <link rel="stylesheet" href="{{ asset('cssbootstrap/bootstrap.css') }}"> --}} -->
+>>>>>>> 5d0d12489986e28a1c8486d01f77d44b2cc60e54
 </head>
 
 <body>
@@ -22,7 +31,7 @@
                         <img src="{{ asset('img/apanine_logo.png') }}" alt="Logo">
                     </span>
                     <div class="text logo-text">
-                        <span class="name">Apanine</span>
+                        <span class="name">Apaninnet</span>
                         <span class="profession">Mis secciones</span>
                     </div>
                     <i class='bx bx-chevron-right toggle'></i>
@@ -36,51 +45,37 @@
                         </li>
                         <ul class="menu-links">
                             <li class="nav-link">
+                                <a href="{{ route('fichausuarios') }}">
+                                    <i class='bx bx-user icon'></i>
+                                    <span class="text nav-text">Usuarios</span>
+                                </a>
+                            </li>
+                            <li class="nav-link">
                                 <a href="{{ route('fichabeneficiario') }}">
                                     <i class='bx bx-notepad icon'></i>
-                                    <span class="text nav-text">Ficha Beneficiario</span>
+                                    <span class="text nav-text">Beneficiarios</span>
+                                </a>
+                            </li>
+                            <li class="nav-link">
+                                <a href="{{ route('fichaespecialista') }}">
+                                    <i class='bx bx-band-aid icon'></i>
+                                    <span class="text nav-text">Especialistas</span>
                                 </a>
                             </li>
                             <li class="nav-link">
                                 <a href="{{ route('asistencia') }}">
                                     <i class='bx bx-user-check icon'></i>
-                                    <span class="text nav-text">Asistencia</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="{{ route('registroactividad') }}">
-                                    <i class='bx bx-wallet icon'></i>
-                                    <span class="text nav-text">Registro/actividad</span>
-                                </a>
-                            </li>
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-pie-chart-alt icon' ></i>
-                                    <span class="text nav-text"></span>
-                                </a>
-                            </li>
-        
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-heart icon' ></i>
-                                    <span class="text nav-text"></span>
-                                </a>
-                            </li>
-        
-                            <li class="nav-link">
-                                <a href="#">
-                                    <i class='bx bx-bell icon' ></i>
-                                    <span class="text nav-text"></span>
+                                    <span class="text nav-text">Asistencias</span>
                                 </a>
                             </li>
                         </ul>
                     </div>
-
+                    <hr>
                     <div class="bottom-content">
                         <li>
                             <a href="#">
                                 <i class='bx bx-log-out icon'></i>
-                                <span class="text nav-text">Salir</span>
+                                <span class="text nav-text">Cerrar sesión</span>
                             </a>
                         </li>
 
@@ -102,6 +97,7 @@
 
         <!-- Contenido para ver las vistas-->
         <main>
+            @yield('navbar') <!-- Contenido dinámico de cada vista -->
             @yield('content') <!-- Contenido dinámico de cada vista -->
         </main>
     </div>
