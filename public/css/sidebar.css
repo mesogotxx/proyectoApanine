@@ -11,6 +11,9 @@
     --sidebar-color: #f9f9f9;
     --primary-color: #456BA5;
     --primary-color-light: #F6F5FF;
+    --second-color-verde:#49A93F;
+    --second-color-naranja: #F28D2C;
+    --second-color-amarillo: #F7EB3B;
     --toggle-color: #DDD;
     --text-color: #262626;
     --text-color-secondary: #434343;
@@ -24,6 +27,9 @@
     --tran-05: all 0.3s ease;
 
     --sidebar-width: 250px;
+}
+.color-verde {
+    color: var(--second-color-verde) !important;
 }
 
 body {
@@ -520,8 +526,8 @@ table th {
 
 .boton-primario {
     background-color: var(--sidebar-color);
-    color: var(--primary-color);
-    border: 1px var(--primary-color) solid;
+    color: var(--second-color-verde);
+    border: 1px var(--second-color-verde) solid;
 }
 
 .boton-secundario {
@@ -540,7 +546,7 @@ table th {
 }
 
 .boton-quintiario {
-    background-color: var(--caution);
+    background-color: var(--second-color-naranja);
     color: var(--sidebar-color);
 }
 
