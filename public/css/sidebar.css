@@ -346,7 +346,6 @@ body.dark .home .text {
 }
 
 h2 {
-    font-weight: 500; 
     color: var(--text-color-secondary)
 }
 
@@ -640,7 +639,7 @@ table th {
 
 hr {
     width: 100%;
-    background-color: #c2d9fc;
+    background-color:var(--text-color-secondary);
     height: 1px;
     border: none;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -965,6 +964,30 @@ fieldset {
 /* modificamos los botones */
 #grupoBotones {
     padding: -40px -40px;
+}
+
+/* noche */
+body.dark {
+    --text-color: #fff; 
+}
+
+body.dark .text {
+    color: #fff; 
+}
+body.dark .boton-secundario{
+    color: #fff; 
+}
+
+body.dark h1, 
+body.dark h2, 
+body.dark h3, 
+body.dark h4, 
+body.dark h5, 
+body.dark h6, 
+body.dark p,
+body.dark table td, 
+body.dark table th {
+    color: #fff; 
 }
 
 /* Responsividad */
