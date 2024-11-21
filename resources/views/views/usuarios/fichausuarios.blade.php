@@ -11,7 +11,7 @@
     </div>
     <hr>
     <div class="fila2">
-        <a class="boton-primario color-verde" id="benAgregar" href="{{ route('formulariousuario') }}">
+        <a class="boton-sextiario" id="benAgregar" href="{{ route('formulariousuario') }}">
             <p><i class='bx bx-user-plus '></i> Agregar usuario</p>
         </a>
         <a class="boton-secundario" id="benExportar" href="{{ route('exportarUsuarios') }}"><i class='bx bx-export'></i>

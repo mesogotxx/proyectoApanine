@@ -11,10 +11,10 @@
     </div>
     <hr>
     <div class="fila2">
-        <a class="boton-primario" id="benAgregar" href="{{ route('formEspecialista') }}">
+        <a class="boton-sextiario" id="benAgregar" href="{{ route('formEspecialista') }}">
             <p><i class='bx bx-user-plus'></i> Agregar especialista</p>
         </a>
-        <a class="boton-primario" id="benAgregar" href="{{ route('formEspecialidad') }}">
+        <a class="boton-cuartiario" id="benAgregar" href="{{ route('formEspecialidad') }}">
             <p><i class='bx bx-plus-medical'></i> Agregar especialidad</p>
         </a>
         <a class="boton-secundario" id="benExportar" href="{{ route('exportarEspecialistas') }}"><i

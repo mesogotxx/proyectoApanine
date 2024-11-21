@@ -511,7 +511,8 @@ table th {
 .boton-secundario,
 .boton-terciario,
 .boton-cuartiario,
-.boton-quintiario {
+.boton-quintiario,
+.boton-sextiario{
     text-decoration: none;
     font-size: (12px, 2vw, 16px);
     padding: 6px 10px;
@@ -520,14 +521,15 @@ table th {
 }
 
 .boton-primario i,
-.boton-secundario i {
+.boton-secundario i,
+.boton-sextiario{
     font-size: (16px, 2vw, 20px);
 }
 
 .boton-primario {
     background-color: var(--sidebar-color);
-    color: var(--second-color-verde);
-    border: 1px var(--second-color-verde) solid;
+    color: var(--primary-color);
+    border: 1px var(--primary-color) solid;
 }
 
 .boton-secundario {
@@ -550,12 +552,19 @@ table th {
     color: var(--sidebar-color);
 }
 
+.boton-sextiario {
+    background-color: var(--sidebar-color);
+    color: var(--second-color-verde);
+    border: 1px var(--second-color-verde) solid;
+}
+
 
 .boton-primario:hover,
 .boton-secundario:hover,
 .boton-terciario:hover,
 .boton-cuartiario:hover,
-.boton-quintiario:hover {
+.boton-quintiario:hover,
+.boton-sextiario:hover {
     transform: scale(1.05);
     transition: all ease .25s;
 }
@@ -564,7 +573,8 @@ table th {
 .boton-secundario:active,
 .boton-terciario:active,
 .boton-cuartiario:active,
-.boton-quintiario:active {
+.boton-quintiario:active,
+.boton-sextiario:active{
     transform: scale(0.97);
 }
 
