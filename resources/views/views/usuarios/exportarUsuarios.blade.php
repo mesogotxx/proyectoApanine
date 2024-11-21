@@ -35,7 +35,7 @@
                 <br>
                 <div class="separacionFormulario">
                     <h3>Participantes seleccionados</h3>
-                    <table>
+                    <table >
                         <thead>
                             <tr>
                                 <th>Rut</th>

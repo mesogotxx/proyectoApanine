@@ -7,7 +7,7 @@
 
 :root {
     /* ===== Colors ===== */
-    --body-color: #e8e8e8;
+    --body-color: #E8E8E8;
     --sidebar-color: #f9f9f9;
     --primary-color: #456BA5;
     --primary-color-light: #F6F5FF;
@@ -61,7 +61,7 @@ body.dark {
     background: var(--sidebar-color);
     transition: var(--tran-05);
     z-index: 100;
-
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar.close {
@@ -345,6 +345,11 @@ body.dark .home .text {
     row-gap: 5px;
 }
 
+h2 {
+    font-weight: 500; 
+    color: var(--text-color-secondary)
+}
+
 h3 {
     font-size: clamp(16px, 2dvw, 21px);
 }
@@ -445,8 +450,10 @@ table {
     padding: 0;
     border-collapse: collapse;
     background-color: var(--sidebar-color);
-    border-radius: 5px;
-    overflow: hidden;
+    border-radius: 8px;
+    overflow: hidden;   
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); 
+    
 }
 
 table thead {
@@ -457,13 +464,21 @@ table thead {
 table tr {
     padding: 5px;
     height: auto;
-    border: 1px var(--primary-color) solid;
+    border: 1px #c2d9fc solid;
+}
+
+table td a{
+    display: inline-block;
+    padding: 5px 10px; 
+    white-space: nowrap; 
+    
 }
 
 table td,
 table th {
     padding: 10px;
     text-align: center;
+    vertical-align: middle;
 }
 
 table td {
@@ -484,6 +499,7 @@ table th {
     text-align: center;
     vertical-align: middle;
 }
+
 
 /* BOTONES */
 .boton-primario,
@@ -620,10 +636,14 @@ table th {
     padding-bottom: 0;
 }
 
+
+
 hr {
     width: 100%;
-    background-color: var(--text-color);
+    background-color: #c2d9fc;
     height: 1px;
+    border: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .fila2 {
@@ -639,6 +659,8 @@ hr {
     column-gap: 4px;
     padding: 5px 0 5px 0;
 }
+
+
 
 .fila2 form {
     display: flex;
@@ -712,6 +734,7 @@ hr {
     gap: 10px;
 }
 
+
 .cuadrado {
     display: flex;
     flex-direction: column;
@@ -745,6 +768,8 @@ hr {
     background-color: var(--sidebar-color);
     border: 1px var(--primary-color) solid;
     border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); /* Sombra profesional y sutil */
+
 }
 
 #btnGroup {
@@ -946,6 +971,7 @@ fieldset {
 @media screen and (max-width: 1200px) {
     table {
         border: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); 
     }
 
     table tr {
@@ -1001,6 +1027,7 @@ fieldset {
 @media screen and (max-width: 1200px) {
     table {
         border: 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06); 
     }
 
     table tr {
